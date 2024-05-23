@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <title>Document</title>
+
+   <script>
+       function getstock(){
+            var stock = document.getElementById('txtStock')
+            var usermsg = document.getElementById('usermsg')
+
+            if(stock.checked==true){
+               usermsg.innerHTML = 'Avaiable'
+            }else{
+              usermsg.innerHTML = 'Out of Stock'
+            }
+
+       }
+
+
+       function getTerms(){
+          var term = document.getElementById('txtterm')
+          var btn = document.getElementById('buy')
+
+          if(term.checked==true){
+            btn.disabled=false
+          }else{
+            btn.disabled=true
+          }
+
+       }
+   </script>
+</head>
+<body>
+
+    <div class="container-fluid">
+    
+ 
+       
+        <div>
+             <label class="form-label" for="">First Name</label>
+              <div>
+                  <input type="text" class="form-control" name="" id="txtFirst">
+              </div>
+        </div>
+        
+        <div>
+             <label for="" class="form-label">Stock</label>
+
+             <div class="form-switch">
+                 <input class="form-check-input" onchange="getstock()" type="checkbox" id="txtStock">
+                 <span class="" id="usermsg">
+
+                 </span>
+             </div>
+        </div>
+
+         <div class="mt-2">
+             <p>terms and conditions</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex perspiciatis perferendis molestiae iste animi eos error illum, natus, omnis alias doloremque inventore minima unde atque blanditiis velit officiis possimus eveniet, ipsa recusandae! Tenetur, error iure maxime repellendus quis commodi eos. Eaque perspiciatis possimus illum, necessitatibus delectus aliquid laudantium quia ea.</p>
+              <div>
+                  <input type="checkbox" onchange="getTerms()" class="form-check-input" name="" id="txtterm"> <span> i agree</span>
+              </div>
+         </div>
+
+         <div>
+             <button disabled class="btn btn-primary mt-3" id="buy">Buy Now</button>
+         </div>
+
+    </div>
+  
+</body>
+</html>
+ 
+
+
+ 

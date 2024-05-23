@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+    var categories = ["Electronics" , "Fashion" , "Cosmatics" , "Footware"]
+   
+    function loadCategories () {
+        var ul = document.querySelector("ul");
+        ul.innerHTML=""
+        for(var item of categories){
+            var li = document.createElement("li");
+            li.innerHTML = item
+            ul.appendChild(li);
+        } 
+    }
+
+
+    function addCategorie() {
+       var newCategory = document.querySelector("input");
+       categories.push(newCategory.value);
+       newCategory.value=""
+       loadCategories();
+    }
+
+    </script>
+
+</head>
+<body onload="loadCategories()">
+    
+    <h2> Add categories</h2>
+ 
+     <input type="text" name="" id="">
+     <button onclick="addCategorie()">submit</button>
+
+     <ul>
+
+     </ul>
+
+</body>
+</html>

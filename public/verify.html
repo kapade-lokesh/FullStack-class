@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Document</title>
+
+     <script>
+          function getValues (){
+             var username = document.getElementById('txtusername').value;
+             var usermsg = document.getElementById('txtusermsg');
+             if(username.length-1<4){
+                usermsg.innerHTML = "name is too sort"
+                usermsg.className = "text-danger"
+                
+             }
+             else{
+                usermsg.innerHTML = "name varified"
+                usermsg.className = "text-success"
+             }
+          }
+
+          function changeCase(username){
+
+          }
+     </script>
+
+</head>
+<body>
+    
+    <div class="container-fluid w-25">
+   
+         <div class="mt-4 border p-3 border-2 border-primary rounded rounded-2">
+            <h2>Register</h2>
+         
+            <dt>First Name</dt>
+            <dd><input type="text" onkeyup="getValues()" class="form-control" name="" id="txtusername"></dd>
+             <span id="txtusermsg"></span>
+
+             <div>
+                <button class="btn btn-outline-primary w-100">submit</button>
+             </div>
+         </div>
+         
+    </div>
+
+</body>
+</html>

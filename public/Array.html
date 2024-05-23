@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+     <script>
+
+     var categories = ["Electronics" , "Footware" , "Fashoin" , "Men's clothing"]
+
+      function loadCategories (){
+        var ul = document.querySelector("ul");
+          for(var item of categories){
+              var li = document.createElement("li");
+              li.innerHTML = item;
+              ul.appendChild(li);   
+          }
+      }
+
+
+      function addCategorie(){
+          var newCategori = document.querySelector("input");
+          categories.push(newCategori.value);
+          var ul = document.querySelector('ul')
+          newCategori.value=""
+          ul.innerHTML=""
+           loadCategories();
+
+      }
+
+     </script>
+
+ </head>
+ <body onload="loadCategories()">
+    
+    <h2>Creaing Elements Using Javascript</h2>
+   
+      <input type="text" name="" id="">
+      <button onclick="addCategorie()">submit</button>
+    
+    <ul>
+
+    </ul>
+
+ </body>
+ </html>
