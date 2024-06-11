@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>one way binding</title>
+
+     <script>
+          
+           function putData(){
+           var name = document.getElementById("txtName").value;
+           var email = document.getElementById('txtEmail').value;
+           var mobile = document.getElementById('txtMobile').value;
+           var add = document.getElementById('txtAddress').value;
+ ;
+
+           var dispname = document.getElementById('name');
+           var dispemail = document.getElementById('email');
+           var dispmobile = document.getElementById('mobile');
+           var dispadd = document.getElementById('address');
+          
+           dispname.innerHTML = name;
+           dispemail.innerHTML = email;
+           dispmobile.innerHTML = mobile;
+           dispadd.innerHTML = add;
+
+           }
+         
+
+           
+
+            
+
+
+     </script>
+
+</head>
+<body>
+     
+    <div class="container-fluid d-flex">
+        <div class="form w-50 border border-2 border-danger p-2">
+   
+            Name : <input type="text" onkeyup="putData()" name="" class="form-control" id="txtName">
+            email: <input type="text" onkeyup="putData()" name="" class="form-control" id="txtEmail">
+            mobile: <input type="text" onkeyup="putData()" name="" class="form-control" id="txtMobile">
+            address: <input type="text" onkeyup="putData()" name="" class="form-control" id="txtAddress">
+            
+             <button class="btn btn-primary mt-4" onclick="putData()">submit</button>
+        </div>
+        
+        <div class="display w-50 ps-4">
+            <dl>
+                <dt>Name</dt>
+                 <dd id="name"></dd>
+                 <dt>email</dt>
+                 <dd id="email"></dd>
+                 <dt>mobile</dt>
+                 <dd id="mobile"></dd>
+                 <dt>address</dt>
+                 <dd  id="address"></dd>
+            </dl>
+        </div>
+    </div>
+     
+</body>
+</html>
